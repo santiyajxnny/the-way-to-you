@@ -811,8 +811,8 @@ async function buildCollage(){
  for(const[x,y,z,c2]of[[ccx-95,1350,13,'#f7c1cc'],[ccx+92,1365,11,'#f29bab'],[ccx+30,1320,9,'#fbe0e5']])paper(g,c2,()=>heartPath(g,x,y,z),.5);
  // footer
  g.textAlign='center';g.fillStyle='#fdf6ec';g.font='700 25px Nunito, sans-serif';
- const host=(location.host&&!/^(localhost|127\.)/.test(location.host))?location.host:'thewaytoyou.netlify.app';
- g.fillText(`made with The Way to You  ·  ${host}`,Wc/2,1832);
+ const host=(location.host&&!/^(localhost|127\.)/.test(location.host))?location.host:'theway2you.netlify.app';
+ g.font='800 30px Nunito, sans-serif';if('letterSpacing' in g)g.letterSpacing='2px';g.fillText(host,Wc/2,1832);if('letterSpacing' in g)g.letterSpacing='0px';
  DPR=oldD;return c;}
 let keepBlob=null,keepURL=null;
 async function openKeep(){const k=$('#keep');$('#keepimg').style.display='none';$('#keepnote').textContent='';$('#keepnote').className='making';$('#keepnote').textContent='Arranging your scrapbook';
@@ -899,11 +899,11 @@ const agreed=()=>{try{return localStorage.getItem('twty-privacy')==='1';}catch(e
 function openPrivacy(forMake){$('#pv-ok').textContent=forMake?'Agree and make my link':'Got it';$('#pv-no').style.display=forMake?'inline-block':'none';$('#privacy').classList.add('show');}
 $('#pvlink').onclick=()=>{pending=null;openPrivacy(false);};
 $('#pv-no').onclick=()=>{pending=null;$('#privacy').classList.remove('show');};
-$('#pv-ok').onclick=()=>{$('#privacy').classList.remove('show');if(pending){try{localStorage.setItem('twty-privacy','1');}catch(e){}const o=pending;pending=null;makeLink(o);}};
+$('#pv-ok').onclick=()=>{$('#privacy').classList.remove('show');if(pending){const o=pending;pending=null;makeLink(o);}};
 $('#f').addEventListener('submit',e=>{e.preventDefault();showErr('');const f=new FormData(e.target);const v=n=>String(f.get(n)||'').trim();
  const o={a:v('a'),b:v('b'),d:v('d'),m:[v('m1'),v('m2'),v('m3')],msg:v('msg'),km:true};
  if(CITY.a&&CITY.b){const d=km(CITY.a,CITY.b);if(d>=10){o.c1=CITY.a.n;o.c2=CITY.b.n;o.dk=Math.round(d);o.u=curUnit();}}
- if(!agreed()){pending=o;openPrivacy(true);}else makeLink(o);});
+ pending=o;openPrivacy(true);});
 async function makeLink(o){const btn=$('#makebtn');btn.disabled=true;btn.textContent='Wrapping it up';let url=null;
  try{const r=await fetch('/api/save',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({data:o,photo:PHOTO_UP})});
   if(r.status===429)throw new Error('busy');if(!r.ok)throw new Error('code '+r.status);const j=await r.json();if(!j.k)throw new Error('fail');url=location.href.split('#')[0]+'#k='+j.k;}

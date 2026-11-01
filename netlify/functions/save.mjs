@@ -9,7 +9,7 @@ const cut = (v, n) => String(v ?? "").trim().slice(0, n);
 
 function newId() {
   const abc = "ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz23456789";
-  const bytes = crypto.getRandomValues(new Uint8Array(12));
+  const bytes = crypto.getRandomValues(new Uint8Array(8));
   return Array.from(bytes, (b) => abc[b % abc.length]).join("");
 }
 
@@ -49,6 +49,7 @@ export default async (req) => {
     c2: cut(d.c2, 60),
     dk: Math.min(20040, Math.max(0, Math.round(Number(d.dk) || 0))),
     u: d.u === "mi" ? "mi" : "km",
+    l: ["en", "zh", "ms", "ta", "hi", "ml"].includes(d.l) ? d.l : "en",
   };
   if (!data.a || !data.b) return json({ error: "names_required" }, 400);
 

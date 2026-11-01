@@ -7,13 +7,21 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <title>The Way to You</title>
 <meta name="description" content="Someone made you a little paper world. Sound on.">
-<meta property="og:title" content="The Way to You">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Way to You">
+<meta property="og:title" content="A little world, made for you">
+<meta property="og:image" content="https://thewaytoyou.app/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="A paper envelope over a soft meadow at dusk">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <meta property="og:description" content="Someone made you a little paper world. Sound on.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Nunito:wght@400;600;700;800&family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
 <style>
-:root{--paper:#fbf4ea;--ink:#3d3354;--rose:#e58f9e;--rose-d:#c46c7c;--plum:#6b5a9e;--muted:#8a6f8f}
+:root{--intl:Georgia;--paper:#fbf4ea;--ink:#3d3354;--rose:#e58f9e;--rose-d:#c46c7c;--plum:#6b5a9e;--muted:#8a6f8f}
 *{box-sizing:border-box}
 html,body{margin:0;height:100%;overflow:hidden;background:#2b2d5c;font-family:'Nunito',system-ui,sans-serif;color:var(--ink);-webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent;-webkit-touch-callout:none}
 canvas{position:fixed;inset:0;width:100%;height:100%;touch-action:none;display:block}
@@ -44,10 +52,10 @@ button{font-family:inherit;cursor:pointer}
 .card::before{content:'';position:absolute;top:-2px;left:50%;width:86px;height:20px;transform:translateX(-50%) rotate(2deg);background:rgba(232,159,174,.5);border-radius:2px}
 #cardwrap.low .card{width:min(560px,80vw)}
 .card .kicker{font:800 11.5px/1.35 'Nunito',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#b0849a;margin:6px 0 8px}
-.card h2{font:600 30px/1.1 'Fraunces',Georgia,serif;margin:0 0 8px;color:var(--ink)}
+.card h2{font:600 30px/1.1 'Fraunces',var(--intl),Georgia,serif;margin:0 0 8px;color:var(--ink)}
 .card .body{font:400 17px/1.5 'Nunito',sans-serif;margin:0 0 16px;white-space:pre-wrap}
-.card .quote{font:italic 400 19px/1.5 'Fraunces',Georgia,serif;color:#4a3f62}
-.card .sign{font:italic 400 16px 'Fraunces',Georgia,serif;color:var(--muted);margin:-6px 0 16px;transition:opacity .8s}
+.card .quote{font:italic 400 19px/1.5 'Fraunces',var(--intl),Georgia,serif;color:#4a3f62}
+.card .sign{font:italic 400 16px 'Fraunces',var(--intl),Georgia,serif;color:var(--muted);margin:-6px 0 16px;transition:opacity .8s}
 .btns{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;transition:opacity .8s}
 @media (max-height:440px){
  .card{padding:18px 22px 16px}
@@ -69,10 +77,10 @@ button{font-family:inherit;cursor:pointer}
 .phone{width:34px;height:58px;border:3px solid #fff8ef;border-radius:9px;margin:0 auto 18px;position:relative;animation:rot 2.6s ease-in-out infinite}
 .phone::after{content:'';position:absolute;left:50%;bottom:4px;width:8px;height:3px;border-radius:2px;background:#fff8ef;transform:translateX(-50%)}
 @keyframes rot{0%,20%{transform:rotate(0)}50%,80%{transform:rotate(-90deg)}100%{transform:rotate(0)}}
-.overlay h2{font:600 30px/1.1 'Fraunces',Georgia,serif;margin:0 0 8px}
+.overlay h2{font:600 30px/1.1 'Fraunces',var(--intl),Georgia,serif;margin:0 0 8px}
 .overlay p{margin:0 0 6px;opacity:.85;font-size:15px}
 .overlay .kicker{font:800 11.5px 'Nunito',sans-serif;letter-spacing:.16em;text-transform:uppercase;opacity:.75;margin-bottom:6px}
-.overlay .big{font:italic 400 42px/1.05 'Fraunces',Georgia,serif;margin:0 0 18px}
+.overlay .big{font:italic 400 42px/1.05 'Fraunces',var(--intl),Georgia,serif;margin:0 0 18px}
 .overlay .tiny{font-size:12.5px;opacity:.6;margin-top:14px}
 @media (max-height:440px){.env{width:90px;height:62px;margin-bottom:12px}.env::before{border-left-width:45px;border-right-width:45px;border-top-width:36px}.env::after{top:22px}.overlay .big{font-size:34px;margin-bottom:14px}}
 
@@ -83,12 +91,13 @@ button{font-family:inherit;cursor:pointer}
 .hero svg{position:absolute;inset:0;width:100%;height:100%}
 .wrap{max-width:560px;margin:0 auto;padding:0 18px 70px;position:relative}
 .brand{text-align:center;margin:-34px 0 22px;position:relative}
-.brand h1{font:600 42px/1 'Fraunces',Georgia,serif;margin:0 0 10px;color:var(--ink)}
+.brand h1{font:600 42px/1 'Fraunces',var(--intl),Georgia,serif;margin:0 0 10px;color:var(--ink)}
 .brand p{font:400 16.5px/1.55 'Nunito',sans-serif;margin:0 auto;max-width:440px;color:#5a4e6c}
 .sheet{background:var(--paper);border-radius:14px;padding:24px 22px;box-shadow:0 7px 0 -3px #ecdfcd,0 18px 40px rgba(60,40,80,.14);margin-bottom:18px}
-.sheet h3{font:600 22px 'Fraunces',Georgia,serif;margin:0 0 6px}
+.sheet h3{font:600 22px 'Fraunces',var(--intl),Georgia,serif;margin:0 0 6px}
 .sheet label{display:block;font:800 13px 'Nunito',sans-serif;color:#6b5a7e;margin:0 0 16px;text-align:left;letter-spacing:.02em}
 .sheet input,.sheet textarea{display:block;width:100%;margin-top:7px;padding:12px 14px;border:1.5px solid #e6d8c8;border-radius:10px;background:#fffdf9;font:400 16px 'Nunito',sans-serif;color:var(--ink);-webkit-user-select:text;user-select:text;resize:vertical}
+.sheet select{display:block;width:100%;margin-top:7px;padding:12px 14px;border:1.5px solid #e6d8c8;border-radius:10px;background:#fffdf9;font:600 16px 'Nunito',sans-serif;color:var(--ink);-webkit-appearance:none;appearance:none;background-image:linear-gradient(45deg,transparent 50%,#8a6f8f 50%),linear-gradient(135deg,#8a6f8f 50%,transparent 50%);background-position:calc(100% - 20px) 52%,calc(100% - 14px) 52%;background-size:6px 6px;background-repeat:no-repeat}
 .sheet input:focus,.sheet textarea:focus{outline:none;border-color:var(--rose);box-shadow:0 0 0 3px rgba(229,143,158,.2)}
 .row{display:flex;gap:12px}.row label{flex:1;min-width:0}
 fieldset{border:none;padding:0;margin:0 0 16px}
@@ -104,6 +113,9 @@ fieldset input{margin-bottom:-2px}
 .steps{display:flex;gap:10px;justify-content:center;margin:0 0 22px;flex-wrap:wrap}
 .steps span{background:#fffaf3;border-radius:999px;padding:6px 13px;font:700 12.5px 'Nunito',sans-serif;color:#6b5a7e;box-shadow:0 2px 0 #eadccb}
 
+/* non-Latin languages: no fake italics, no letter spacing */
+html:is([lang=zh],[lang=ta],[lang=hi],[lang=ml]) body *{font-style:normal!important;letter-spacing:0!important}
+html:is([lang=ta],[lang=hi],[lang=ml]) .card .body,html:is([lang=ta],[lang=hi],[lang=ml]) .card .quote{line-height:1.7}
 /* distance fields */
 .citywrap{position:relative}
 .citylist{position:absolute;left:0;right:0;top:100%;margin-top:4px;background:#fffdf9;border:1.5px solid #e6d8c8;border-radius:10px;box-shadow:0 12px 26px rgba(60,40,80,.15);z-index:5;display:none;overflow:hidden}
@@ -116,8 +128,8 @@ fieldset input{margin-bottom:-2px}
 .units input{position:absolute;opacity:0;width:0;height:0}
 .units span{display:block;padding:6px 14px;border-radius:999px;font:800 13px 'Nunito',sans-serif;color:#7d6c88}
 .units input:checked+span{background:#fffdf9;color:var(--ink);box-shadow:0 2px 0 #e6d7c5}
-.distnote{font:italic 400 17px 'Fraunces',Georgia,serif;color:#6b5a7e;margin:10px 0 0;min-height:1em}
-#miles{position:fixed;top:max(12px,env(safe-area-inset-top));left:50%;transform:translate(-50%,-8px);background:rgba(255,250,242,.94);color:var(--ink);padding:8px 20px;border-radius:999px;font:italic 600 17px 'Fraunces',Georgia,serif;box-shadow:0 6px 18px rgba(30,20,50,.28);opacity:0;transition:opacity .5s,transform .5s;pointer-events:none;z-index:15;white-space:nowrap}
+.distnote{font:italic 400 17px 'Fraunces',var(--intl),Georgia,serif;color:#6b5a7e;margin:10px 0 0;min-height:1em}
+#miles{position:fixed;top:max(12px,env(safe-area-inset-top));left:50%;transform:translate(-50%,-8px);background:rgba(255,250,242,.94);color:var(--ink);padding:8px 20px;border-radius:999px;font:italic 600 17px 'Fraunces',var(--intl),Georgia,serif;box-shadow:0 6px 18px rgba(30,20,50,.28);opacity:0;transition:opacity .5s,transform .5s;pointer-events:none;z-index:15;white-space:nowrap}
 #miles.show{opacity:1;transform:translate(-50%,0)}
 #miles b{font:800 17px 'Nunito',sans-serif;font-style:normal;margin-right:4px;font-variant-numeric:tabular-nums}
 body.hintlow #hint{top:auto;bottom:max(12px,env(safe-area-inset-bottom))}
@@ -145,7 +157,7 @@ body.hintlow #hint{top:auto;bottom:max(12px,env(safe-area-inset-bottom))}
 #privacy li{margin-bottom:7px}
 
 /* gate states */
-#gate-load p{font:italic 400 22px 'Fraunces',Georgia,serif;opacity:.9;animation:pulse 1.6s ease-in-out infinite}
+#gate-load p{font:italic 400 22px 'Fraunces',var(--intl),Georgia,serif;opacity:.9;animation:pulse 1.6s ease-in-out infinite}
 @keyframes pulse{50%{opacity:.45}}
 #gate-gone h2{max-width:420px;margin-left:auto;margin-right:auto}
 #gate-gone .btn{margin-top:14px}
@@ -163,7 +175,7 @@ body.hintlow #hint{top:auto;bottom:max(12px,env(safe-area-inset-bottom))}
 #pol .sheen{position:absolute;inset:0;background:#f4efe6;opacity:1}
 #pol.dev .sheen{animation:sheen 4.5s ease-out forwards}
 @keyframes sheen{to{opacity:0}}
-#pol .cap{height:24%;display:flex;align-items:center;justify-content:center;font:italic 400 calc(var(--ph)*.06) 'Fraunces',Georgia,serif;color:#5a4e6c;text-align:center;padding:0 6px}
+#pol .cap{height:24%;display:flex;align-items:center;justify-content:center;font:italic 400 calc(var(--ph)*.06) 'Fraunces',var(--intl),Georgia,serif;color:#5a4e6c;text-align:center;padding:0 6px}
 #cardwrap.withpol{justify-content:flex-start;padding-left:5vw}
 #cardwrap.withpol .card{width:min(470px,50vw)}
 
@@ -181,7 +193,7 @@ body.hintlow #hint{top:auto;bottom:max(12px,env(safe-area-inset-bottom))}
 #keep .side p{opacity:.8;font-size:14.5px;line-height:1.5;margin:0 0 18px}
 #keep .kbtns{display:flex;flex-direction:column;gap:12px;align-items:flex-start}
 #keep .linkbtn{color:#e8dcf2;margin:2px 0 0}
-#keep .making{font:italic 400 22px 'Fraunces',Georgia,serif;animation:pulse 1.6s ease-in-out infinite}
+#keep .making{font:italic 400 22px 'Fraunces',var(--intl),Georgia,serif;animation:pulse 1.6s ease-in-out infinite}
 @media (orientation:portrait){#keep{flex-direction:column;flex-wrap:nowrap;gap:18px}#keep img{max-height:60vh}#keep .side{text-align:center}#keep .kbtns{align-items:center}}
 @media (max-height:440px){#keep h2{font-size:24px}#keep .side p{margin-bottom:12px}}
 </style>
@@ -199,10 +211,10 @@ body.hintlow #hint{top:auto;bottom:max(12px,env(safe-area-inset-bottom))}
 <div id="gate" class="overlay">
  <div>
   <div class="env"></div>
-  <div id="gate-load"><p>Unwrapping your surprise</p></div>
+  <div id="gate-load"><p id="tx-unwrap">Unwrapping your surprise</p></div>
   <div id="gate-gone">
-   <h2>This little world has drifted away</h2>
-   <p>Links last for 6 months after they're made.</p>
+   <h2 id="tx-gone">This little world has drifted away</h2>
+   <p id="tx-gone2">Links last for 6 months after they're made.</p>
    <button class="btn" id="gone-make">Make your own</button>
   </div>
   <div id="gate-port">
@@ -211,10 +223,10 @@ body.hintlow #hint{top:auto;bottom:max(12px,env(safe-area-inset-bottom))}
    <p>This little world was made for landscape.</p>
   </div>
   <div id="gate-land">
-   <div class="kicker">a little world, made for</div>
+   <div class="kicker" id="tx-made">a little world, made for</div>
    <div class="big" id="gate-name">you</div>
    <button class="btn" id="open">Open</button>
-   <div class="tiny">Sound on, if you can.</div>
+   <div class="tiny" id="tx-sound">Sound on, if you can.</div>
   </div>
  </div>
 </div>
@@ -228,8 +240,8 @@ body.hintlow #hint{top:auto;bottom:max(12px,env(safe-area-inset-bottom))}
 <div id="keep" class="overlay">
  <img id="keepimg" alt="Your keepsake collage">
  <div class="side">
-  <div class="kicker">your keepsake</div>
-  <h2>Keep this moment</h2>
+  <div class="kicker" id="tx-keepk">your keepsake</div>
+  <h2 id="tx-keeph">Keep this moment</h2>
   <p id="keepnote">Share it to your story, or save it to your photos.</p>
   <div class="kbtns">
    <button class="btn" id="kshare">Share to story</button>
@@ -276,6 +288,11 @@ body.hintlow #hint{top:auto;bottom:max(12px,env(safe-area-inset-bottom))}
     <label>Their name<input name="b" maxlength="24" required placeholder="e.g. Alex"></label>
    </div>
    <label>The day it all began<input type="date" name="d"></label>
+   <label>Language of the surprise
+    <select name="l" id="lang" class="sel">
+     <option value="en">English</option><option value="zh">中文 (简体)</option><option value="ms">Bahasa Melayu</option>
+     <option value="ta">தமிழ்</option><option value="hi">हिन्दी</option><option value="ml">മലയാളം</option>
+    </select></label>
    <fieldset>
     <legend>Three little memories</legend>
     <p class="sub">They'll find these as fireflies along the forest path.</p>
@@ -362,18 +379,123 @@ function snap(name,fx,fy){try{const c=document.createElement('canvas');c.width=9
 function enc(o){const b=new TextEncoder().encode(JSON.stringify(o));let s='';b.forEach(x=>s+=String.fromCharCode(x));return btoa(s).replace(/\+/g,'-').replace(/\//g,'_').replace(/=+$/,'');}
 function dec(str){str=str.replace(/-/g,'+').replace(/_/g,'/');while(str.length%4)str+='=';const bin=atob(str);const b=new Uint8Array(bin.length);for(let i=0;i<bin.length;i++)b[i]=bin.charCodeAt(i);return JSON.parse(new TextDecoder().decode(b));}
 function clean(o){const s=(v,n)=>String(v||'').trim().slice(0,n);
- return{a:s(o.a,24)||'me',b:s(o.b,24)||'you',d:s(o.d,10),m:(Array.isArray(o.m)?o.m:[]).slice(0,3).map(v=>s(v,120)),msg:s(o.msg,400),km:o.km!==false,c1:s(o.c1,60),c2:s(o.c2,60),dk:clamp(Math.round(+o.dk||0),0,20040),u:o.u==='mi'?'mi':'km'};}
+ return{a:s(o.a,24)||'me',b:s(o.b,24)||'you',d:s(o.d,10),m:(Array.isArray(o.m)?o.m:[]).slice(0,3).map(v=>s(v,120)),msg:s(o.msg,400),km:o.km!==false,c1:s(o.c1,60),c2:s(o.c2,60),dk:clamp(Math.round(+o.dk||0),0,20040),u:o.u==='mi'?'mi':'km',l:I18N[o.l]?o.l:'en'};}
 function parse(){const m=location.hash.match(/[#&]w=([^&]+)/);if(!m)return null;
  try{const o=dec(m[1]);const s=(v,n)=>String(v||'').trim().slice(0,n);
-  return{a:s(o.a,24)||'me',b:s(o.b,24)||'you',d:s(o.d,10),m:(Array.isArray(o.m)?o.m:[]).slice(0,3).map(v=>s(v,120)),msg:s(o.msg,400),km:o.km!==false,c1:s(o.c1,60),c2:s(o.c2,60),dk:clamp(Math.round(+o.dk||0),0,20040),u:o.u==='mi'?'mi':'km'};}catch(e){return null;}}
+  return{a:s(o.a,24)||'me',b:s(o.b,24)||'you',d:s(o.d,10),m:(Array.isArray(o.m)?o.m:[]).slice(0,3).map(v=>s(v,120)),msg:s(o.msg,400),km:o.km!==false,c1:s(o.c1,60),c2:s(o.c2,60),dk:clamp(Math.round(+o.dk||0),0,20040),u:o.u==='mi'?'mi':'km',l:I18N[o.l]?o.l:'en'};}catch(e){return null;}}
 const DEFAULT_MSG='Happy anniversary. Of every path I could have taken, I am so glad the one I chose led me to you.';
 function demoData(){const d=new Date();d.setFullYear(d.getFullYear()-3);d.setDate(d.getDate()-12);
  return{a:'Sam',b:'Alex',d:d.toISOString().slice(0,10),m:['The rainy night we shared one umbrella and both got soaked anyway','Your terrible singing in the car, which I secretly love','Every slow Sunday morning with you'],msg:'Happy anniversary. Of every path I could have taken, I am so glad the one I chose led me to you. Here is to all the days still ahead of us.'};}
 function parseDate(){if(!DATA||!/^\d{4}-\d{2}-\d{2}$/.test(DATA.d))return null;const[y,m,d]=DATA.d.split('-').map(Number);const dt=new Date(y,m-1,d);return isNaN(dt)?null:dt;}
-function daysText(){const st=parseDate();if(!st)return'happy anniversary';const n0=new Date();const today=new Date(n0.getFullYear(),n0.getMonth(),n0.getDate());
- const n=Math.round((today-st)/864e5);if(n<0)return'happy anniversary';if(n===0)return'day one, and counting';if(n===1)return'1 day and counting';return n.toLocaleString()+' days and counting';}
-function distInfo(){if(!DATA||!(DATA.dk>=10))return null;const mi=DATA.u==='mi';const n=Math.round(mi?DATA.dk*.621371:DATA.dk);return{n,unit:mi?'miles':'km',c1:DATA.c1,c2:DATA.c2};}
+function daysText(){const st=parseDate();if(!st)return t('anniv');const n0=new Date();const today=new Date(n0.getFullYear(),n0.getMonth(),n0.getDate());
+ const n=Math.round((today-st)/864e5);if(n<0)return t('anniv');if(n===0)return t('day0');if(n===1)return t('day1');return t('days',{n:fmtN(n)});}
+function distInfo(){if(!DATA||!(DATA.dk>=10))return null;const mi=DATA.u==='mi';const n=Math.round(mi?DATA.dk*.621371:DATA.dk);return{n,unit:mi?t('mi'):t('km'),c1:DATA.c1,c2:DATA.c2};}
 const initial=s=>(Array.from(String(s).trim())[0]||'').toUpperCase();
+/* ---------- languages ----------
+   Each language is one block. To fix a translation, change the text between the quotes.
+   {a} = sender's name, {b} = their name, {n} = a number, {unit} = miles or km,
+   {i} = memory number, {date} = the start date. The | marks where a line breaks on phones. */
+const I18N={
+ en:{made:'a little world, made for',open:'Open',sound:'Sound on, if you can.',unwrap:'Unwrapping your surprise',
+  gone:'This little world has drifted away',gone2:"Links last for 6 months after they're made.",goneBtn:'Make your own',
+  tapCat:'Tap the sleepy little one',stroke:'Now stroke them gently',
+  noteK:'{a} asked me to bring you somewhere,',noteT:'{b}.',noteB:'Will you follow me?',follow:'Follow',
+  tilt:'Tilt your phone to guide them, or drag',drag:'Drag with your finger to guide them',recentered:'Tilt recentered',recenter:'Recenter tilt',
+  memK:'memory {i} of {n}',keepGoing:'Keep going',
+  between:'<b>{n}</b> {unit} between you',toGo:'<b>{n}</b> {unit} to go',madeIt:'<b>0</b> {unit}. You made it.',mi:'miles',km:'km',
+  tapLock:'Tap the glowing lock',swipe:'Swipe down to close the lock',flick:'Now flick the key into the river',
+  days:'{n} days |and counting',day1:'1 day |and counting',day0:'day one, |and counting',anniv:'happy |anniversary',
+  finalT:'{b},',sign:'with love, {a}',keepMoment:'Keep this moment',replay:'Replay',makeOne:'Make one for someone',
+  defMsg:'Happy anniversary. Of every path I could have taken, I am so glad the one I chose led me to you.',
+  keepK:'your keepsake',keepH:'Keep this moment',arranging:'Arranging your scrapbook',
+  noteShare:'Share it to your story, or save it to your photos.',noteSave:'Save it to your photos, then share it to your story. On a phone you can also press and hold the image.',
+  share:'Share to story',save:'Save image',back:'Back',apart:'{n} {unit} apart',since:'since {date}',always:'always'},
+ zh:{made:'为你做的小小世界',open:'打开看看',sound:'开声音，会更有感觉哦。',unwrap:'你的惊喜正在准备中...',
+  gone:'这个小小世界已经不见了',gone2:'链接只能保留 6 个月哦。',goneBtn:'你也来做一个',
+  tapCat:'点一下那只在睡觉的小家伙',stroke:'现在轻轻摸摸它',
+  noteK:'{a} 叫我带你去一个地方，',noteT:'{b}。',noteB:'要跟我走吗？',follow:'走吧',
+  tilt:'倾斜手机带路，或者用手指拖',drag:'用手指拖着它走',recentered:'好了，重新校准了',recenter:'重新校准',
+  memK:'回忆 {i} / {n}',keepGoing:'继续走吧',
+  between:'你们之间隔着 <b>{n}</b> {unit}',toGo:'还差 <b>{n}</b> {unit}',madeIt:'<b>0</b> {unit}。到啦！',mi:'英里',km:'公里',
+  tapLock:'点一下那把发光的锁',swipe:'往下滑，把它锁上',flick:'现在把钥匙丢进河里吧',
+  days:'一起走过 {n} 天，|故事还在继续...',day1:'一起走过 1 天，|故事还在继续...',day0:'第一天，|故事还在继续...',anniv:'周年|快乐',
+  finalT:'{b}，',sign:'永远爱你的 {a}',keepMoment:'把这一刻存起来',replay:'再看一次',makeOne:'也帮别人做一个',
+  defMsg:'周年快乐。那么多条路，我最喜欢的，还是带我走到你身边的这一条。',
+  keepK:'你的纪念',keepH:'把这一刻存起来',arranging:'正在整理你的小相册...',
+  noteShare:'分享到你的 Story，或者存到相册。',noteSave:'先存到相册，再分享到 Story。在手机上也可以长按图片保存。',
+  share:'分享到 Story',save:'存图片',back:'返回',apart:'相隔 {n} {unit}',since:'从 {date} 开始',always:'永远'},
+ ms:{made:'satu dunia kecil, khas untuk',open:'Bukalah',sound:'Bukak sound, lagi best.',unwrap:'Surprise awak tengah siap...',
+  gone:'Dunia kecil ni dah takde',gone2:'Link cuma tahan 6 bulan je.',goneBtn:'Buat yang awak punya',
+  tapCat:'Sentuh si comel yang tengah tidur tu',stroke:'Sekarang usap dia perlahan-lahan',
+  noteK:'{a} suruh saya bawa awak ke satu tempat,',noteT:'{b}.',noteB:'Jom ikut saya?',follow:'Jom',
+  tilt:'Senget phone untuk tunjuk jalan, atau tarik guna jari',drag:'Tarik guna jari untuk tunjuk jalan',recentered:'Dah set semula',recenter:'Set semula',
+  memK:'kenangan {i} / {n}',keepGoing:'Jom teruskan',
+  between:'<b>{n}</b> {unit} antara korang',toGo:'Lagi <b>{n}</b> {unit} je',madeIt:'<b>0</b> {unit}. Dah sampai!',mi:'batu',km:'km',
+  tapLock:'Sentuh mangga yang bercahaya tu',swipe:'Swipe ke bawah untuk kunci',flick:'Sekarang campak kunci tu dalam sungai',
+  days:'{n} hari bersama, |cerita kita belum habis...',day1:'1 hari bersama, |cerita kita belum habis...',day0:'hari pertama, |cerita kita belum habis...',anniv:'happy |anniversary',
+  finalT:'{b},',sign:'Selalu milik awak, {a}',keepMoment:'Simpan kenangan ni',replay:'Tengok lagi',makeOne:'Buat untuk someone',
+  defMsg:'Happy anniversary. Banyak jalan saya boleh pilih, tapi jalan yang bawa saya kepada awak tu lah yang paling saya sayang.',
+  keepK:'kenangan awak',keepH:'Simpan kenangan ni',arranging:'Tengah susun scrapbook...',
+  noteShare:'Share kat story awak, atau save dalam gallery.',noteSave:'Save dulu dalam gallery, lepas tu share kat story. Kat phone, awak boleh tekan lama gambar tu untuk save.',
+  share:'Share kat story',save:'Save gambar',back:'Balik',apart:'{n} {unit} jauhnya',since:'sejak {date}',always:'selamanya'},
+ ta:{made:'உனக்காக ஒரு குட்டி உலகம்',open:'திறந்து பாரு',sound:'சவுண்ட் ஆன் பண்ணா இன்னும் அழகா இருக்கும்.',unwrap:'உன் சர்ப்ரைஸ் ரெடி ஆகுது...',
+  gone:'இந்த குட்டி உலகம் காணாம போச்சு',gone2:'லிங்க் 6 மாசம் தான் இருக்கும்.',goneBtn:'நீயும் ஒன்னு பண்ணு',
+  tapCat:'தூங்குற குட்டியை தொட்டு எழுப்பு',stroke:'இப்போ மெதுவா தடவி கொடு',
+  noteK:'{a} உன்னை ஒரு இடத்துக்கு கூட்டிட்டு வர சொன்னாங்க,',noteT:'{b}.',noteB:'என் கூட வர்றியா?',follow:'வரேன்',
+  tilt:'போனை சாய்ச்சு வழி காட்டு, இல்லனா விரலால இழு',drag:'விரலால இழுத்து வழி காட்டு',recentered:'சரி பண்ணியாச்சு',recenter:'திரும்ப சரி பண்ணு',
+  memK:'ஞாபகம் {i} / {n}',keepGoing:'போலாம் வா',
+  between:'உங்களுக்குள்ள <b>{n}</b> {unit} தூரம்',toGo:'இன்னும் <b>{n}</b> {unit} தான்',madeIt:'<b>0</b> {unit}. வந்துட்ட!',mi:'மைல்கள்',km:'கி.மீ',
+  tapLock:'மின்னுற பூட்டை தொடு',swipe:'கீழே ஸ்வைப் பண்ணி பூட்டு',flick:'இப்போ சாவியை ஆத்துல தூக்கி போடு',
+  days:'{n} நாள் ஒன்னா, |இன்னும் தொடரும்...',day1:'1 நாள் ஒன்னா, |இன்னும் தொடரும்...',day0:'முதல் நாள், |இன்னும் தொடரும்...',anniv:'ஹேப்பி |ஆனிவர்சரி',
+  finalT:'{b},',sign:'என்றும் உன் {a}',keepMoment:'இந்த நினைவை வச்சுக்கோ',replay:'திரும்ப பாரு',makeOne:'யாருக்காவது ஒன்னு பண்ணு',
+  defMsg:'ஹேப்பி ஆனிவர்சரி. எத்தனையோ வழி இருந்துச்சு, ஆனா உன்கிட்ட கூட்டிட்டு வந்த இந்த வழி தான் எனக்கு ரொம்ப பிடிச்சது.',
+  keepK:'உனக்கான நினைவு',keepH:'இந்த நினைவை வச்சுக்கோ',arranging:'ஸ்க்ராப்புக் ரெடி ஆகுது...',
+  noteShare:'உன் ஸ்டோரில ஷேர் பண்ணு, இல்லனா போட்டோஸ்ல சேவ் பண்ணிக்கோ.',noteSave:'முதல்ல போட்டோஸ்ல சேவ் பண்ணு, அப்புறம் ஸ்டோரில ஷேர் பண்ணு. போன்ல படத்தை அழுத்தி பிடிச்சும் சேவ் பண்ணலாம்.',
+  share:'ஸ்டோரில ஷேர் பண்ணு',save:'சேவ் பண்ணு',back:'பின்னாடி',apart:'{n} {unit} தூரத்துல',since:'{date}ல இருந்து',always:'எப்பவும்'},
+ hi:{made:'तुम्हारे लिए एक छोटी-सी दुनिया',open:'खोलो ना',sound:'साउंड ऑन करो, और भी मज़ा आएगा।',unwrap:'तुम्हारा सरप्राइज़ तैयार हो रहा है...',
+  gone:'ये छोटी-सी दुनिया अब नहीं रही',gone2:'लिंक बस 6 महीने चलते हैं।',goneBtn:'अपना वाला बनाओ',
+  tapCat:'सोए हुए छोटू को छूकर जगाओ',stroke:'अब प्यार से सहलाओ',
+  noteK:'{a} ने कहा है, तुम्हें कहीं ले चलूँ,',noteT:'{b}.',noteB:'साथ चलें?',follow:'चलो',
+  tilt:'फ़ोन टिल्ट करके रास्ता दिखाओ, या उंगली से खींचो',drag:'उंगली से खींचकर रास्ता दिखाओ',recentered:'सेट हो गया',recenter:'फिर से सेट करो',
+  memK:'याद {i} / {n}',keepGoing:'आगे चलो',
+  between:'तुम दोनों के बीच <b>{n}</b> {unit}',toGo:'बस <b>{n}</b> {unit} और',madeIt:'<b>0</b> {unit}। मंज़िल आ गई!',mi:'मील',km:'कि.मी.',
+  tapLock:'चमकते ताले को छुओ',swipe:'नीचे स्वाइप करके ताला लगाओ',flick:'अब चाबी नदी में फेंक दो',
+  days:'{n} दिन साथ, |और कहानी जारी है...',day1:'1 दिन साथ, |और कहानी जारी है...',day0:'पहला दिन, |और कहानी जारी है...',anniv:'हैप्पी |एनिवर्सरी',
+  finalT:'{b},',sign:'हमेशा तुम्हारे साथ, {a}',keepMoment:'इस पल को सेव करो',replay:'फिर से देखो',makeOne:'किसी के लिए बनाओ',
+  defMsg:'हैप्पी एनिवर्सरी। कितने ही रास्ते थे, पर जो रास्ता मुझे तुम तक ले आया, वही सबसे प्यारा है।',
+  keepK:'तुम्हारी याद',keepH:'इस पल को सेव करो',arranging:'स्क्रैपबुक बन रही है...',
+  noteShare:'अपनी स्टोरी पर शेयर करो, या फ़ोटोज़ में सेव कर लो।',noteSave:'पहले फ़ोटोज़ में सेव करो, फिर स्टोरी पर शेयर करो। फ़ोन पर फ़ोटो को दबाकर भी सेव कर सकते हो।',
+  share:'स्टोरी पर शेयर करो',save:'सेव करो',back:'वापस',apart:'{n} {unit} दूर',since:'{date} से',always:'हमेशा'},
+ ml:{made:'നിനക്കായി ഒരു കുഞ്ഞു ലോകം',open:'തുറന്നു നോക്ക്',sound:'സൗണ്ട് ഓൺ ആക്കിയാൽ ഇതിലും രസമാ.',unwrap:'നിന്റെ സർപ്രൈസ് റെഡി ആകുന്നു...',
+  gone:'ഈ കുഞ്ഞു ലോകം പോയല്ലോ',gone2:'ലിങ്ക് 6 മാസം മാത്രമേ ഉണ്ടാകൂ.',goneBtn:'നീയും ഒന്ന് ഉണ്ടാക്ക്',
+  tapCat:'ഉറങ്ങുന്ന കുഞ്ഞിനെ തൊട്ട് ഉണർത്ത്',stroke:'ഇനി പതുക്കെ ഒന്ന് തലോട്',
+  noteK:'{a} നിന്നെ ഒരിടത്തേക്ക് കൊണ്ടുവരാൻ പറഞ്ഞു,',noteT:'{b}.',noteB:'എന്റെ കൂടെ വരുന്നോ?',follow:'വരാം',
+  tilt:'ഫോൺ ചരിച്ച് വഴി കാണിക്ക്, അല്ലെങ്കിൽ വിരൽ കൊണ്ട് വലിക്ക്',drag:'വിരൽ കൊണ്ട് വലിച്ച് വഴി കാണിക്ക്',recentered:'സെറ്റ് ആയി',recenter:'വീണ്ടും സെറ്റ് ചെയ്യ്',
+  memK:'ഓർമ്മ {i} / {n}',keepGoing:'വാ, പോകാം',
+  between:'നിങ്ങൾക്കിടയിൽ <b>{n}</b> {unit} ദൂരം',toGo:'ഇനി <b>{n}</b> {unit} കൂടി',madeIt:'<b>0</b> {unit}. എത്തിപ്പോയി!',mi:'മൈൽ',km:'കി.മീ',
+  tapLock:'മിന്നുന്ന പൂട്ടിൽ തൊട്',swipe:'താഴേക്ക് സ്വൈപ്പ് ചെയ്ത് പൂട്ട്',flick:'ഇനി താക്കോൽ പുഴയിലേക്ക് എറിഞ്ഞേക്ക്',
+  days:'{n} ദിവസം ഒന്നിച്ച്, |കഥ തുടരും...',day1:'1 ദിവസം ഒന്നിച്ച്, |കഥ തുടരും...',day0:'ആദ്യ ദിവസം, |കഥ തുടരും...',anniv:'ഹാപ്പി |ആനിവേഴ്സറി',
+  finalT:'{b},',sign:'എന്നും നിന്റെ {a}',keepMoment:'ഈ നിമിഷം സേവ് ചെയ്യ്',replay:'ഒന്നൂടെ കാണാം',makeOne:'ആർക്കെങ്കിലും ഒന്ന് ഉണ്ടാക്ക്',
+  defMsg:'ഹാപ്പി ആനിവേഴ്സറി. എത്രയോ വഴികൾ ഉണ്ടായിരുന്നു, പക്ഷേ നിന്നിലേക്ക് എത്തിച്ച ഈ വഴിയാണ് എനിക്ക് ഏറ്റവും ഇഷ്ടം.',
+  keepK:'നിനക്കുള്ള ഓർമ്മ',keepH:'ഈ നിമിഷം സേവ് ചെയ്യ്',arranging:'സ്ക്രാപ്പ്ബുക്ക് റെഡി ആകുന്നു...',
+  noteShare:'നിന്റെ സ്റ്റോറിയിൽ ഷെയർ ചെയ്യ്, അല്ലെങ്കിൽ ഫോട്ടോസിൽ സേവ് ചെയ്യ്.',noteSave:'ആദ്യം ഫോട്ടോസിൽ സേവ് ചെയ്യ്, പിന്നെ സ്റ്റോറിയിൽ ഷെയർ ചെയ്യ്. ഫോണിൽ ഫോട്ടോയിൽ അമർത്തിപ്പിടിച്ചും സേവ് ചെയ്യാം.',
+  share:'സ്റ്റോറിയിൽ ഷെയർ ചെയ്യ്',save:'സേവ് ചെയ്യ്',back:'തിരിച്ച്',apart:'{n} {unit} അകലെ',since:'{date} മുതൽ',always:'എന്നും'}
+};
+const LANG_FONT={zh:'Noto Serif SC',ta:'Noto Serif Tamil',hi:'Noto Serif Devanagari',ml:'Noto Serif Malayalam'};
+const LANG_LOC={en:undefined,zh:'zh-CN',ms:'ms-MY',ta:'ta-IN',hi:'hi-IN',ml:'ml-IN'};
+let LANG='en',INTL='',ITAL='italic ';
+function t(key,vars){let s=(I18N[LANG]&&I18N[LANG][key])||I18N.en[key]||key;if(vars)for(const k in vars)s=s.split('{'+k+'}').join(String(vars[k]));return s;}
+const plain=s=>String(s).replace(/\s*\|\s*/g,' ').replace(/ (?=[，。])/g,'');
+const fmtN=n=>Number(n).toLocaleString(LANG_LOC[LANG]);
+const fmtD=d=>d.toLocaleDateString(LANG_LOC[LANG],{day:'numeric',month:'short',year:'numeric'});
+const esc=v=>String(v).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+function setLang(l){LANG=I18N[l]?l:'en';const f=LANG_FONT[LANG];INTL=f?`'${f}', `:'';ITAL=f?'':'italic ';document.documentElement.lang=LANG;
+ document.documentElement.style.setProperty('--intl',f?`'${f}'`:'Georgia');
+ if(f&&!document.getElementById('font-'+LANG)){const ln=document.createElement('link');ln.id='font-'+LANG;ln.rel='stylesheet';ln.href='https://fonts.googleapis.com/css2?family='+f.replace(/ /g,'+')+':wght@400;600&display=swap';document.head.appendChild(ln);}
+ const set=(id,k)=>{const e=document.getElementById(id);if(e)e.textContent=t(k);};
+ set('tx-made','made');set('open','open');set('tx-sound','sound');set('tx-unwrap','unwrap');set('tx-gone','gone');set('tx-gone2','gone2');set('gone-make','goneBtn');
+ set('recenter','recenter');set('tx-keepk','keepK');set('tx-keeph','keepH');set('kshare','share');set('ksave','save');set('kback','back');}
+
 
 /* ---------- music box ---------- */
 function buildSong(){
@@ -503,7 +625,7 @@ function drawLock(g,cx,cy,w,shut,txt,sub){
  g.shadowColor='transparent';g.strokeStyle='#eae5f2';g.lineWidth=lw*.3;g.beginPath();g.arc(cx,arcY,sr+lw*.15,Math.PI*1.15,Math.PI*1.55);g.stroke();g.restore();
  paper(g,'#f3c56b',()=>rr(g,cx-w/2,topY,w,h,w*.14),.9);
  g.save();g.beginPath();rr(g,cx-w/2,topY,w,h,w*.14);g.clip();g.fillStyle='#e3ad52';g.fillRect(cx-w/2,topY+h*.78,w,h*.22);g.fillStyle='rgba(255,255,255,.28)';g.fillRect(cx-w/2+w*.08,topY+h*.1,w*.07,h*.6);g.restore();
- if(txt&&w>50){g.textAlign='center';g.textBaseline='middle';g.font=`600 ${w*.2}px Fraunces, Georgia, serif`;g.fillStyle='rgba(255,240,200,.6)';g.fillText(txt,cx+1,cy-h*.04+1);g.fillStyle='#9b6a2a';g.fillText(txt,cx,cy-h*.04);
+ if(txt&&w>50){g.textAlign='center';g.textBaseline='middle';g.font=`600 ${w*.2}px Fraunces, ${INTL}Georgia, serif`;g.fillStyle='rgba(255,240,200,.6)';g.fillText(txt,cx+1,cy-h*.04+1);g.fillStyle='#9b6a2a';g.fillText(txt,cx,cy-h*.04);
   if(sub){g.font=`600 ${w*.075}px Nunito, sans-serif`;g.fillStyle='#a87a35';g.fillText(sub.toUpperCase(),cx,cy+h*.24);}}
  else{g.fillStyle='#8a5c22';dot(g,cx,cy-h*.02,w*.07);g.beginPath();g.moveTo(cx-w*.04,cy);g.lineTo(cx+w*.04,cy);g.lineTo(cx,cy+h*.2);g.closePath();g.fill();}
 }
@@ -520,7 +642,7 @@ function drawKey(g,x,y,s,rot){g.save();g.translate(x,y);g.rotate(rot);g.shadowCo
 function Meadow(){
  const S={};let bg,s,cx,cy,pet=0,petDown=false,lp=null,hAcc=0,nAcc=0,doneT=0,shown=false;const motes=[];
  const cat={a:0,state:'sleep',blink:0,bt:2,happy:0};
- S.enter=()=>{S.resize();for(let i=0;i<14;i++)motes.push({x:Math.random(),y:.42+Math.random()*.48,p:Math.random()*6.28,sp:.3+Math.random()*.5});if(started)hint('Tap the sleepy little one');};
+ S.enter=()=>{S.resize();for(let i=0;i<14;i++)motes.push({x:Math.random(),y:.42+Math.random()*.48,p:Math.random()*6.28,sp:.3+Math.random()*.5});if(started)hint(t('tapCat'));};
  S.resize=()=>{s=W<H?Math.min(W*.0046,H*.0024):Math.min(H*.0042,W*.0032);cx=W*.5;cy=H*(W<H?.84:.86);bg=render();};
  function render(){const[c,g]=layer();const r=rng(7);
   const gr=g.createLinearGradient(0,0,0,H);gr.addColorStop(0,'#9d90c8');gr.addColorStop(.42,'#e6a8b8');gr.addColorStop(.75,'#fad6bd');g.fillStyle=gr;g.fillRect(0,0,W,H);
@@ -532,20 +654,20 @@ function Meadow(){
   for(const[x,y,a,b,q]of items){if(a<.55)tuft(g,x,y,H*.026*(.6+b*.7),q<.5?'#4f7f5a':'#8cba8e');else flower(g,x,y,H*.0095*(.7+b*.6),['#f6c3cf','#fff2df','#f3a3b6','#e9d0f2'][q*4|0]);}
   return c;}
  S.update=dt=>{
-  if(cat.state==='waking'){cat.a=Math.min(1,cat.a+dt/.9);if(cat.a>=1){cat.state='pet';hint('Now stroke them gently');}}
+  if(cat.state==='waking'){cat.a=Math.min(1,cat.a+dt/.9);if(cat.a>=1){cat.state='pet';hint(t('stroke'));}}
   if(cat.a>=1){cat.bt-=dt;if(cat.bt<0){cat.blink=.13;cat.bt=1.5+Math.random()*3;}}
   if(cat.blink>0)cat.blink-=dt;cat.happy=Math.max(0,cat.happy-dt*.9);
   if(cat.state==='done'){doneT+=dt;if(doneT>.45&&!S.snapped){S.snapped=1;snap('meadow',cx/W,(cy-40*s)/H);}if(doneT>.9&&!shown){shown=true;
-   card({kicker:`${DATA.a} asked me to bring you somewhere,`,title:`${DATA.b}.`,body:'Will you follow me?',btns:[['Follow',()=>go(Maze)]]});}}
+   card({kicker:t('noteK',{a:DATA.a}),title:t('noteT',{b:DATA.b}),body:t('noteB'),btns:[[t('follow'),()=>go(Maze)]]});}}
   updHearts(dt);};
  S.draw=()=>{const g=ctx;g.drawImage(bg,0,0,W,H);
   for(const m of motes){const x=m.x*W+Math.sin(T*m.sp+m.p)*20,y=m.y*H+Math.cos(T*m.sp*1.3+m.p)*12;glow(g,x,y,11,.3+.3*Math.sin(T*2+m.p));}
   if(cat.state==='sleep'&&started){const pr=(T%2.2)/2.2;g.strokeStyle=`rgba(255,250,240,${.55*(1-pr)})`;g.lineWidth=2;g.beginPath();g.ellipse(cx+4*s,cy-14*s,(42+30*pr)*s,(24+18*pr)*s,0,0,Math.PI*2);g.stroke();}
   drawCat(g,cx,cy,s,cat.a,cat.blink>0,cat.happy,T);
-  if(cat.a<.3){g.textAlign='center';for(let i=0;i<3;i++){const ph=(T*.45+i/3)%1;g.globalAlpha=Math.sin(ph*Math.PI)*.9;g.fillStyle='#fffaf3';g.font=`italic 600 ${(9+ph*9)*s}px Fraunces, Georgia, serif`;g.fillText('z',cx+(36+ph*26)*s,cy-(30+ph*44)*s);}g.globalAlpha=1;}
+  if(cat.a<.3){g.textAlign='center';for(let i=0;i<3;i++){const ph=(T*.45+i/3)%1;g.globalAlpha=Math.sin(ph*Math.PI)*.9;g.fillStyle='#fffaf3';g.font=`italic 600 ${(9+ph*9)*s}px Fraunces, ${INTL}Georgia, serif`;g.fillText('z',cx+(36+ph*26)*s,cy-(30+ph*44)*s);}g.globalAlpha=1;}
   drawHearts(g);};
  const near=(p,R)=>dist(p.x,p.y,cx+6*s,cy-26*s)<R*s;
- S.down=p=>{if(cat.state==='sleep'){if(near(p,85)){cat.state='waking';hint('');Music.chime([72,79,84]);for(let i=0;i<4;i++)addHeart(cx+20*s,cy-40*s);}else hint('Tap the sleepy little one');return;}
+ S.down=p=>{if(cat.state==='sleep'){if(near(p,85)){cat.state='waking';hint('');Music.chime([72,79,84]);for(let i=0;i<4;i++)addHeart(cx+20*s,cy-40*s);}else hint(t('tapCat'));return;}
   if(cat.state==='pet'){petDown=true;lp=p;if(near(p,95)){cat.happy=1;addHeart(p.x,p.y-8);}}};
  S.move=p=>{if(cat.state!=='pet'||!petDown)return;const d=dist(p.x,p.y,lp.x,lp.y);lp=p;if(!near(p,100))return;
   cat.happy=1;pet+=d;hAcc+=d;nAcc+=d;if(hAcc>32){hAcc=0;addHeart(p.x,p.y-10);}if(nAcc>130){nAcc=0;Music.sparkle();}
@@ -571,9 +693,9 @@ function Maze(){
  const cat={x:.5,y:.5,vx:0,vy:0,rot:0},R=.27,WH=.09;
  S.enter=()=>{if(W>=H){rows=H<520?7:8;cols=clamp(Math.round(rows*(W/H)*.92),8,15);}else{cols=W<360?6:7;rows=clamp(Math.round(cols*(H/W)*.88),9,14);}
   build();S.resize();tiltBase=null;
-  DI=distInfo();if(DI){mShown=DI.n;mMode='intro';setMiles(`<b>${DI.n.toLocaleString()}</b> ${DI.unit} between you`);setTimeout(()=>{if(!done)mMode='count';},3200);}
-  hint(tiltSeen?'Tilt your phone to guide them, or drag':'Drag with your finger to guide them',6000);$('#recenter').classList.toggle('show',tiltSeen);};
- S.onTilt=()=>{$('#recenter').classList.add('show');hint('Tilt your phone to guide them, or drag',5000);};
+  DI=distInfo();if(DI){mShown=DI.n;mMode='intro';setMiles(t('between',{n:fmtN(DI.n),unit:esc(DI.unit)}));setTimeout(()=>{if(!done)mMode='count';},3200);}
+  hint(tiltSeen?t('tilt'):t('drag'),6000);$('#recenter').classList.toggle('show',tiltSeen);};
+ S.onTilt=()=>{$('#recenter').classList.add('show');hint(t('tilt'),5000);};
  S.exit=()=>{$('#recenter').classList.remove('show');setMiles(null);};
  S.resize=()=>{cell=Math.min((W-40)/cols,(H-60)/rows);ox=(W-cols*cell)/2;oy=(H-rows*cell)/2+14;bg=render();};
  function build(){const N=cols*rows,wl=[];for(let i=0;i<N;i++)wl.push([1,1,1,1]);const vis=new Uint8Array(N),st=[0];vis[0]=1;
@@ -615,15 +737,15 @@ function Maze(){
   const sp=Math.hypot(cat.vx,cat.vy);if(sp>5.5){cat.vx*=5.5/sp;cat.vy*=5.5/sp;}
   for(let i=0;i<4;i++){cat.x+=cat.vx*dt/4;cat.y+=cat.vy*dt/4;collide();}
   if(DI&&mMode==='count'){const ci=clamp(Math.floor(cat.y),0,rows-1)*cols+clamp(Math.floor(cat.x),0,cols-1);const tgt=DI.n*Math.max(0,dE[ci])/Math.max(1,dE[0]);
-   mShown=lerp(mShown,tgt,Math.min(1,dt*2.5));const v=Math.round(mShown);if(v!==mLast){mLast=v;setMiles(`<b>${v.toLocaleString()}</b> ${DI.unit} to go`);}}
+   mShown=lerp(mShown,tgt,Math.min(1,dt*2.5));const v=Math.round(mShown);if(v!==mLast){mLast=v;setMiles(t('toGo',{n:fmtN(v),unit:esc(DI.unit)}));}}
   cat.x=clamp(cat.x,R,cols+1);cat.y=clamp(cat.y,R,rows-R);
   cat.rot=lerp(cat.rot,clamp(cat.vx*.08,-.35,.35),Math.min(1,dt*8));
   trail.unshift([cat.x,cat.y]);if(trail.length>90)trail.pop();
   for(const f of flies)if(!f.got&&dist(cat.x,cat.y,f.x,f.y)<.45){f.got=true;got++;frozen=true;cat.vx=cat.vy=0;inp.down=false;Music.chime([79,83,86,91]);hint('');
    const[px,py]=[ox+f.x*cell,oy+f.y*cell];for(let i=0;i<6;i++)addHeart(px,py);
-   setTimeout(()=>card({kicker:`memory ${got} of ${flies.length}`,body:f.m,quote:true,btns:[['Keep going',()=>{hideCard();frozen=false;tiltBase=null;}]]}),550);break;}
+   setTimeout(()=>card({kicker:t('memK',{i:got,n:flies.length}),body:f.m,quote:true,btns:[[t('keepGoing'),()=>{hideCard();frozen=false;tiltBase=null;}]]}),550);break;}
   if(cat.x>cols-.1){done=true;hint('');snap('forest',(ox+(cols-2.5)*cell)/W,.5);Music.chime([72,76,79,84]);
-   if(DI){mMode='done';setMiles(`<b>0</b> ${DI.unit}. You made it.`);for(let i=0;i<10;i++)addHeart(ox+cols*cell,oy+(rows-.5)*cell,true);}
+   if(DI){mMode='done';setMiles(t('madeIt',{unit:esc(DI.unit)}));for(let i=0;i<10;i++)addHeart(ox+cols*cell,oy+(rows-.5)*cell,true);}
    setTimeout(()=>go(Bridge),DI?1700:350);}};
  S.draw=()=>{const g=ctx;g.drawImage(bg,0,0,W,H);
   const ex=ox+cols*cell,ey=oy+(rows-.5)*cell;glow(g,ex,ey,cell*1.7,.55+.25*Math.sin(T*2));
@@ -647,9 +769,9 @@ function Bridge(){
  let P=false;
  const deckY=x=>P?H*.6-Math.sin(Math.PI*x/W)*H*.03:H*.56-Math.sin(Math.PI*x/W)*H*.07,railY=x=>deckY(x)-34*k,RT=()=>P?H*.77:H*.74;
  const catX=()=>W/2+(P?W*.25:H*.15),moonP=()=>P?[W*.78,H*.085,W*.075]:[W*.83,H*.2,Math.min(W,H)*.085],BWf=()=>P?W*.5:Math.min(H*.34,W*.25),lockCY=()=>P?H*.42:H*.46;
- const st=parseDate(),dateStr=st?st.toLocaleDateString(undefined,{day:'numeric',month:'short',year:'numeric'}):'';
+ const st=parseDate(),dateStr=st?fmtD(st):'';
  const ini=`${initial(DATA.a)} ♥ ${initial(DATA.b)}`;
- S.enter=()=>{dtxt=daysText();S.resize();hint('Tap the glowing lock');};
+ S.enter=()=>{dtxt=daysText();S.resize();hint(t('tapLock'));};
  S.resize=()=>{P=W<H;k=Math.min(W,H)/400;bg=render();stars=[];const r=rng(5);for(let i=0;i<80;i++)stars.push({x:r()*W,y:r()*H*.55,s:.5+r()*1.4,p:r()*6});if(lights.length)buildLights(false);};
  function render(){const[c,g]=layer();const r=rng(3);
   const gr=g.createLinearGradient(0,0,0,H);gr.addColorStop(0,'#1f2150');gr.addColorStop(.5,'#463c7c');gr.addColorStop(.78,'#7c629f');g.fillStyle=gr;g.fillRect(0,0,W,H);
@@ -676,11 +798,11 @@ function Bridge(){
    paper(g,c,()=>{g.moveTo(-10,H+10);for(let x=-10;x<=W+10;x+=10)g.lineTo(x,y0+Math.sin(x*.018+T*(.6+i*.2)+i)*H*.008);g.lineTo(W+10,H+10);g.closePath();},.5+i*.2);});
   g.fillStyle='rgba(252,240,218,.45)';for(let i=0;i<5;i++){const w=Math.min(W,H*2.2)*(.09-i*.013),y=rt+H*.035+i*H*.045,x=moonP()[0]+Math.sin(T*1.2+i)*6;g.beginPath();rr(g,x-w/2,y,w,2.4*k,1.2*k);g.fill();}}
  function buildLights(fresh){const c=document.createElement('canvas');c.width=Math.max(1,W|0);c.height=Math.max(1,H*(P?.26:.36)|0);const x=c.getContext('2d');const top=P?H*.12:H*.04;
-  let lines=[dtxt];if(P){const w=dtxt.split(' ');if(w.length>=3){const h=Math.ceil(w.length/2);lines=[w.slice(0,h).join(' '),w.slice(h).join(' ')];}}const longest=lines.reduce((a,b)=>b.length>a.length?b:a);
-  let fs=P?Math.min(W*.16,c.height*.42):Math.min(H*.15,W*.11);const F=()=>x.font=`600 ${fs}px Fraunces, Georgia, serif`;F();while(x.measureText(longest).width>W*.84&&fs>10){fs*=.92;F();}
+  let lines=[plain(dtxt)];if(P&&dtxt.includes('|'))lines=dtxt.split('|').map(x=>x.trim()).filter(Boolean);const longest=lines.reduce((a,b)=>b.length>a.length?b:a);
+  let fs=P?Math.min(W*.16,c.height*.42):Math.min(H*.15,W*.11);const F=()=>x.font=`600 ${fs}px Fraunces, ${INTL}Georgia, serif`;F();while(x.measureText(longest).width>W*.84&&fs>10){fs*=.92;F();}
   x.fillStyle='#fff';x.textAlign='center';x.textBaseline='middle';const lh=fs*1.12;lines.forEach((l,i)=>x.fillText(l,W/2,c.height*.5+(i-(lines.length-1)/2)*lh));
-  const id=x.getImageData(0,0,c.width,c.height).data;let step=Math.max(3,Math.round(fs/10)),pts=[];
-  const collect=()=>{pts=[];for(let y=0;y<c.height;y+=step)for(let xx=0;xx<c.width;xx+=step)if(id[(y*c.width+xx)*4+3]>140)pts.push([xx,y+top]);};collect();while(pts.length>(P?620:560)){step++;collect();}
+  const id=x.getImageData(0,0,c.width,c.height).data;const dense=['ta','hi','ml','zh'].includes(LANG);let step=Math.max(dense?2:3,Math.round(fs/(dense?13:10))),pts=[];
+  const collect=()=>{pts=[];for(let y=0;y<c.height;y+=step)for(let xx=0;xx<c.width;xx+=step)if(id[(y*c.width+xx)*4+3]>140)pts.push([xx,y+top]);};collect();const cap=dense?950:(P?620:560);while(pts.length>cap){step++;collect();}
   lightR=step;const r=rng(9);
   lights=pts.map(p=>({sx:W*(.08+r()*.84),sy:RT()+H*.04+r()*H*.16,tx:p[0],ty:p[1],d:fresh===false?0:.3+r()*1.6+(p[0]/W)*1.4,ph:r()*6,x:0,y:0}));
   lightsDone=fresh===false?0:3.3+2.6;}
@@ -688,9 +810,9 @@ function Bridge(){
  function splash(x,y){Music.splash();for(let i=0;i<3;i++)ripples.push({x,y,r:4*k,a:.9,d:i*.25});
   for(let i=0;i<16;i++)drops.push({x,y,vx:(Math.random()-.5)*220*k,vy:-(120+Math.random()*220)*k,life:1});}
  S.update=dt=>{
-  if(stage==='zoomin'){z=Math.min(1,z+dt/.9);if(z>=1){stage='lock';hint('Swipe down to close the lock');}}
+  if(stage==='zoomin'){z=Math.min(1,z+dt/.9);if(z>=1){stage='lock';hint(t('swipe'));}}
   if(shutting){shut=Math.min(1,shut+dt/.22);if(shut>=1){shutting=false;Music.click();Music.chime([72,76,79]);burst(W/2,lockCY(),BWf());setTimeout(()=>snap('lock',.5,.42),380);
-   setTimeout(()=>{stage='key';key={x:P?W/2-24*k*1.3:W/2+BWf()*.95,y:P?lockCY()+BWf()*.95:H*.5,vx:0,vy:0,rot:-.4,spin:0,held:false,fly:false};hint('Now flick the key into the river');},750);}}
+   setTimeout(()=>{stage='key';key={x:P?W/2-24*k*1.3:W/2+BWf()*.95,y:P?lockCY()+BWf()*.95:H*.5,vx:0,vy:0,rot:-.4,spin:0,held:false,fly:false};hint(t('flick'));},750);}}
   if(key&&key.fly){key.vy+=1500*k*dt;key.x+=key.vx*dt;key.y+=key.vy*dt;key.rot+=key.spin*dt;
    if(key.x<20){key.x=20;key.vx=Math.abs(key.vx)*.5;}if(key.x>W-20){key.x=W-20;key.vx=-Math.abs(key.vx)*.5;}
    if(key.vy>0&&key.y>RT()+H*.09){splash(key.x,key.y);key=null;stage='splashed';setTimeout(()=>{stage='zoomout';},1100);}}
@@ -700,9 +822,9 @@ function Bridge(){
   if(stage==='lanterns'){lt+=dt;spawn-=dt;if(spawn<=0){spawn=lt<8?.45:1.3;lanterns.push({x:W*(.05+Math.random()*.9),y:RT()+H*.06+Math.random()*H*.1,vy:-(16+Math.random()*16)*k,s:(7+Math.random()*7)*k,ph:Math.random()*6});}
    if(!S.snapped&&lt>lightsDone){S.snapped=1;snap('lanterns',.5,.38);}
    if(!cardShown&&lt>lightsDone+.4){cardShown=true;const hasP=!!PHOTO_IMG;
-    card({low:!hasP,withpol:hasP,kicker:dtxt,title:`${DATA.b},`,body:DATA.msg||DEFAULT_MSG,quote:true,type:true,sign:`with love, ${DATA.a}`,
+    card({low:!hasP,withpol:hasP,kicker:plain(dtxt),title:t('finalT',{b:DATA.b}),body:DATA.msg||t('defMsg'),quote:true,type:true,sign:t('sign',{a:DATA.a}),
      afterType:hasP?(rest=>revealPol(rest)):null,
-     btns:[['Keep this moment',openKeep],['Replay',()=>{hideCard();go(Meadow);},true],['Make one for someone',()=>{location.hash='';},true]]});}}
+     btns:[[t('keepMoment'),openKeep],[t('replay'),()=>{hideCard();go(Meadow);},true],[t('makeOne'),()=>{location.href='/';},true]]});}}
   for(let i=lanterns.length-1;i>=0;i--){const L=lanterns[i];L.y+=L.vy*dt;L.x+=Math.sin(T*.8+L.ph)*8*k*dt;if(L.y<-40)lanterns.splice(i,1);}
   updHearts(dt);};
  S.draw=()=>{const g=ctx;g.drawImage(bg,0,0,W,H);
@@ -725,7 +847,7 @@ function Bridge(){
   if(stage==='find'){const LX=W/2,LY=railY(W/2)+11*k;
    if(dist(p.x,p.y,LX,LY)<60*k){stage='zoomin';hint('');Music.chime([76,81,84]);}
    else if(dist(p.x,p.y,catX()+20*k*.85,deckY(catX())-30*k)<45*k){for(let i=0;i<5;i++)addHeart(p.x,p.y);Music.sparkle();}
-   else hint('Tap the glowing lock');}
+   else hint(t('tapLock'));}
   else if(stage==='lock'){swipe0=p;}
   else if(stage==='key'&&key&&!key.fly){if(dist(p.x,p.y,key.x+24*k*1.3,key.y)<95*k){key.held=true;key.ox=key.x-p.x;key.oy=key.y-p.y;}}};
  S.move=p=>{samples.push({x:p.x,y:p.y,t:performance.now()});if(samples.length>6)samples.shift();
@@ -759,7 +881,7 @@ function polaroid(g,cx,cy,w,h,rot,src,caption,opts={}){
  if(src&&src.img){g.save();g.beginPath();g.rect(px,py,pw,ph);g.clip();cover(g,src.img,px,py,pw,ph,src.fx,src.fy);
   const v=g.createLinearGradient(0,py,0,py+ph);v.addColorStop(0,'rgba(255,236,214,.10)');v.addColorStop(1,'rgba(90,60,110,.12)');g.fillStyle=v;g.fillRect(px,py,pw,ph);g.restore();}
  else{g.fillStyle='#ead9e6';g.fillRect(px,py,pw,ph);g.fillStyle='#e8798f';g.beginPath();heartPath(g,0,py+ph*.52,pw*.12);g.fill();}
- if(caption){const capTop=py+ph,capH=h/2-capTop;const font=sz=>`italic 400 ${sz}px Fraunces, Georgia, serif`;
+ if(caption){const capTop=py+ph,capH=h/2-capTop;const font=sz=>`italic 400 ${sz}px Fraunces, ${INTL}Georgia, serif`;
   const f=fitText(g,caption,pw*.92,opts.lines||3,opts.cap||26,opts.capMin||17,font);g.font=font(f.size);g.fillStyle='#4f4466';g.textAlign='center';g.textBaseline='middle';
   const lh=f.size*1.22,y0=capTop+capH/2-(f.lines.length-1)*lh/2;f.lines.forEach((l,i)=>g.fillText(l,0,y0+i*lh));}
  if(opts.tape){g.save();g.translate(0,-h/2+4);g.rotate(opts.tape);g.fillStyle=opts.tapeCol||'rgba(232,159,174,.62)';g.fillRect(-w*.17,-h*.035,w*.34,h*.07);g.restore();}
@@ -775,7 +897,7 @@ function drawFlourish(g,cx,cy,w,ink){g.save();g.strokeStyle=ink;g.lineCap='round
 function drawPin(g,x,y,r,col){paper(g,col,()=>{g.moveTo(x,y);g.bezierCurveTo(x-r*.35,y-r*.9,x-r,y-r*1.25,x-r,y-r*1.85);g.arc(x,y-r*1.85,r,Math.PI,0);g.bezierCurveTo(x+r,y-r*1.25,x+r*.35,y-r*.9,x,y);},.7);
  g.fillStyle='#fff';g.beginPath();heartPath(g,x,y-r*1.8,r*.62);g.fill();}
 async function buildCollage(){
- try{await Promise.all([document.fonts.load('italic 400 40px Fraunces'),document.fonts.load('600 40px Fraunces'),document.fonts.load('800 20px Nunito'),document.fonts.load("600 40px 'Dancing Script'")]);}catch(e){}
+ try{await Promise.all([document.fonts.load('italic 400 40px Fraunces'),document.fonts.load('600 40px Fraunces'),document.fonts.load('800 20px Nunito'),document.fonts.load("600 40px 'Dancing Script'"),...(LANG_FONT[LANG]?[document.fonts.load(`600 40px '${LANG_FONT[LANG]}'`),document.fonts.load(`400 40px '${LANG_FONT[LANG]}'`)]:[])]);}catch(e){}
  const Wc=1080,Hc=1920,c=document.createElement('canvas');c.width=Wc;c.height=Hc;const g=c.getContext('2d');const oldD=DPR;DPR=1.4;
  const r=rng(21);
  g.fillStyle='#f5ebdf';g.fillRect(0,0,Wc,Hc);
@@ -787,7 +909,7 @@ async function buildCollage(){
  // header
  g.textAlign='center';g.textBaseline='alphabetic';g.fillStyle='#a07a8f';g.font='800 28px Nunito, sans-serif';
  if('letterSpacing' in g)g.letterSpacing='8px';g.fillText('THE WAY TO YOU',Wc/2+4,262);if('letterSpacing' in g)g.letterSpacing='0px';
- const dt=daysText();let fs=92;g.font=`italic 400 ${fs}px Fraunces, Georgia, serif`;while(g.measureText(dt).width>960&&fs>40){fs-=2;g.font=`italic 400 ${fs}px Fraunces, Georgia, serif`;}
+ const dt=plain(daysText());let fs=92;g.font=`${ITAL}400 ${fs}px Fraunces, ${INTL}Georgia, serif`;while(g.measureText(dt).width>960&&fs>40){fs-=2;g.font=`${ITAL}400 ${fs}px Fraunces, ${INTL}Georgia, serif`;}
  g.fillStyle='#3d3354';g.fillText(dt,Wc/2,352);
  // hills at the bottom
  const hl=(by,amp,k,ph)=>{g.moveTo(-10,Hc+10);for(let x=-10;x<=Wc+10;x+=8){const u=x/Wc;g.lineTo(x,by+Math.sin(u*Math.PI*k+ph)*amp+Math.sin(u*Math.PI*k*2.7+ph*1.9)*amp*.35);}g.lineTo(Wc+10,Hc+10);g.closePath();};
@@ -799,14 +921,14 @@ async function buildCollage(){
  const hero=PHOTO_IMG?{img:PHOTO_IMG,fx:.5,fy:.4}:(img('lanterns')||img('lock'));
  polaroid(g,540,822,720,840,-.04,hero,`${DATA.b} & ${DATA.a}`,{big:true,ph:650,cap:54,capMin:34,lines:1,tape:.05});
  // lock charm
- g.save();g.translate(905,1172);g.rotate(.13);drawLock(g,0,0,150,1,`${initial(DATA.a)} ♥ ${initial(DATA.b)}`,(()=>{const st=parseDate();return st?st.toLocaleDateString(undefined,{day:'numeric',month:'short',year:'numeric'}):'';})());g.restore();
+ g.save();g.translate(905,1172);g.rotate(.13);drawLock(g,0,0,150,1,`${initial(DATA.a)} ♥ ${initial(DATA.b)}`,(()=>{const st=parseDate();return st?fmtD(st):'';})());g.restore();
  // paper flower tucked on the photo corner
  paperFlower(g,168,1222,74);
  // left: the distance between you
  const DI=distInfo(),ink='#3d3354';
  drawFlourish(g,300,1332,440,ink);
- const script=sz=>`600 ${sz}px 'Dancing Script', cursive`;
- let line;if(DI)line=`${DI.n.toLocaleString()} ${DI.unit} apart`;else{const st=parseDate();line=st?'since '+st.toLocaleDateString(undefined,{day:'numeric',month:'short',year:'numeric'}):'always';}
+ const script=sz=>`600 ${sz}px 'Dancing Script', ${INTL}cursive`;
+ let line;if(DI)line=t('apart',{n:fmtN(DI.n),unit:DI.unit});else{const st=parseDate();line=st?t('since',{date:fmtD(st)}):t('always');}
  let ss=70;g.font=script(ss);while(g.measureText(line).width>470&&ss>34){ss-=2;g.font=script(ss);}
  g.fillStyle=ink;g.textAlign='center';g.textBaseline='alphabetic';g.fillText(line,300,1436);
  if(DI){const p1=[112,1548],p2=[488,1528];
@@ -823,18 +945,18 @@ async function buildCollage(){
  for(const[x,y,z,c2]of[[ccx-95,1350,13,'#f7c1cc'],[ccx+92,1365,11,'#f29bab'],[ccx+30,1320,9,'#fbe0e5']])paper(g,c2,()=>heartPath(g,x,y,z),.5);
  // footer
  g.textAlign='center';g.fillStyle='#fdf6ec';g.font='700 25px Nunito, sans-serif';
- const host=(location.host&&!/^(localhost|127\.)/.test(location.host))?location.host:'theway2you.netlify.app';
+ const host=(location.host&&!/^(localhost|127\.)/.test(location.host))?location.host:'thewaytoyou.app';
  g.font='800 30px Nunito, sans-serif';if('letterSpacing' in g)g.letterSpacing='2px';g.fillText(host,Wc/2,1832);if('letterSpacing' in g)g.letterSpacing='0px';
  DPR=oldD;return c;}
 let keepBlob=null,keepURL=null;
-async function openKeep(){const k=$('#keep');$('#keepimg').style.display='none';$('#keepnote').textContent='';$('#keepnote').className='making';$('#keepnote').textContent='Arranging your scrapbook';
+async function openKeep(){const k=$('#keep');$('#keepimg').style.display='none';$('#keepnote').textContent='';$('#keepnote').className='making';$('#keepnote').textContent=t('arranging');
  $('#kshare').style.display='none';$('#ksave').style.display='none';k.classList.add('show');
  const c=await buildCollage();keepBlob=await new Promise(res=>c.toBlob(res,'image/jpeg',.92));if(keepURL)URL.revokeObjectURL(keepURL);keepURL=URL.createObjectURL(keepBlob);
  const im=$('#keepimg');im.src=keepURL;im.style.display='block';Music.chime([79,84,88]);
  const file=new File([keepBlob],'the-way-to-you.jpg',{type:'image/jpeg'});
  const canShare=!!(navigator.canShare&&navigator.canShare({files:[file]}));
  $('#kshare').style.display=canShare?'inline-block':'none';$('#ksave').style.display='inline-block';$('#ksave').className=canShare?'btn ghost':'btn';
- $('#keepnote').className='';$('#keepnote').textContent=canShare?'Share it to your story, or save it to your photos.':'Save it to your photos, then share it to your story. On a phone you can also press and hold the image.';}
+ $('#keepnote').className='';$('#keepnote').textContent=canShare?t('noteShare'):t('noteSave');}
 $('#kshare').onclick=()=>{if(!keepBlob)return;const file=new File([keepBlob],'the-way-to-you.jpg',{type:'image/jpeg'});navigator.share({files:[file],title:'The Way to You'}).catch(()=>{});};
 $('#ksave').onclick=()=>{if(!keepURL)return;const a=document.createElement('a');a.href=keepURL;a.download='the-way-to-you.jpg';document.body.appendChild(a);a.click();a.remove();};
 $('#kback').onclick=()=>{$('#keep').classList.remove('show');};
@@ -867,15 +989,16 @@ addEventListener('orientationchange',()=>setTimeout(resize,250));
 document.addEventListener('visibilitychange',()=>{if(!Music.c)return;document.hidden?Music.c.suspend():(started&&Music.c.resume());});
 
 $('#mute').onclick=()=>{Music.setOn(!Music.on);$('#mute').classList.toggle('off',!Music.on);};
-$('#recenter').onclick=()=>{tiltBase=null;hint('Tilt recentered',1500);};
+$('#recenter').onclick=()=>{tiltBase=null;hint(t('recentered'),1500);};
 $('#open').onclick=()=>{
  Music.init();Music.resume();Music.start();
  try{if(typeof DeviceOrientationEvent!=='undefined'&&typeof DeviceOrientationEvent.requestPermission==='function')DeviceOrientationEvent.requestPermission().catch(()=>{});}catch(_){}
  if(coarse()){const de=document.documentElement;try{const p=de.requestFullscreen&&de.requestFullscreen({navigationUI:'hide'});if(p&&p.then)p.catch(()=>{});}catch(_){}}
- $('#gate').classList.remove('show');started=true;$('#mute').classList.add('show');hint('Tap the sleepy little one');};
+ $('#gate').classList.remove('show');started=true;$('#mute').classList.add('show');hint(t('tapCat'));};
 
 /* ---------- create page ---------- */
-function linkFor(o){return location.href.split('#')[0]+'#w='+enc(o);}
+function linkFor(o){return location.origin+'/#w='+enc(o);}
+function slugName(n){return String(n).toLowerCase().normalize('NFKD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,'').slice(0,16);}
 $('#msg').addEventListener('input',e=>{$('#cnt').textContent=e.target.value.length+'/360';});
 async function shrinkPhoto(file){const url=URL.createObjectURL(file);try{const img=await new Promise((res,rej)=>{const i=new Image();i.onload=()=>res(i);i.onerror=rej;i.src=url;});
  let w=img.naturalWidth,h=img.naturalHeight;const sc=Math.min(1,1080/Math.max(w,h));w=Math.round(w*sc);h=Math.round(h*sc);
@@ -913,12 +1036,12 @@ $('#pvlink').onclick=()=>{pending=null;openPrivacy(false);};
 $('#pv-no').onclick=()=>{pending=null;$('#privacy').classList.remove('show');};
 $('#pv-ok').onclick=()=>{$('#privacy').classList.remove('show');if(pending){const o=pending;pending=null;makeLink(o);}};
 $('#f').addEventListener('submit',e=>{e.preventDefault();showErr('');const f=new FormData(e.target);const v=n=>String(f.get(n)||'').trim();
- const o={a:v('a'),b:v('b'),d:v('d'),m:[v('m1'),v('m2'),v('m3')],msg:v('msg'),km:true};
+ const o={a:v('a'),b:v('b'),d:v('d'),m:[v('m1'),v('m2'),v('m3')],msg:v('msg'),km:true,l:$('#lang').value};
  if(CITY.a&&CITY.b){const d=km(CITY.a,CITY.b);if(d>=10){o.c1=CITY.a.n;o.c2=CITY.b.n;o.dk=Math.round(d);o.u=curUnit();}}
  pending=o;openPrivacy(true);});
 async function makeLink(o){const btn=$('#makebtn');btn.disabled=true;btn.textContent='Wrapping it up';let url=null;
  try{const r=await fetch('/api/save',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({data:o,photo:PHOTO_UP})});
-  if(r.status===429)throw new Error('busy');if(!r.ok)throw new Error('code '+r.status);const j=await r.json();if(!j.k)throw new Error('fail');url=location.href.split('#')[0]+'#k='+j.k;}
+  if(r.status===429)throw new Error('busy');if(!r.ok)throw new Error('code '+r.status);const j=await r.json();if(!j.k)throw new Error('fail');const sl=slugName(o.b);url=location.origin+'/for/'+(sl?sl+'-':'')+j.k;}
  catch(err){if(err.message==='busy'){showErr('Lots of little worlds being made right now. Please wait a minute and try again.');}
   else if(!PHOTO_UP){url=linkFor(o);}
   else showErr(`We couldn't upload the photo just now (${err.message||'no connection'}). Check your connection and try again, or remove the photo to make a link without it.`);}
@@ -929,23 +1052,24 @@ $('#copy').onclick=()=>{const u=$('#link').value;const ok=()=>{$('#copy').textCo
  if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(u).then(ok).catch(()=>{$('#link').select();document.execCommand('copy');ok();});else{$('#link').select();document.execCommand('copy');ok();}};
 if(!navigator.share)$('#share').style.display='none';
 $('#share').onclick=()=>{navigator.share({title:'The Way to You',text:'I made you something. Sound on.',url:$('#link').value}).catch(()=>{});};
-$('#demo').onclick=()=>{location.hash='w='+enc(demoData());};
+$('#demo').onclick=()=>{const d=demoData();d.l=$('#lang').value;if(d.l!=='en')d.msg='';location.hash='w='+enc(d);};
 
 /* ---------- boot ---------- */
 function gateState(st){const gt=$('#gate');gt.dataset.state=st;$('#gate-load').style.display=st==='load'?'block':'none';$('#gate-gone').style.display=st==='gone'?'block':'none';
  const port=false;$('#gate-port').style.display=st==='ready'&&port?'block':'none';$('#gate-land').style.display=st==='ready'&&!port?'block':'none';}
 function loadPhoto(src){return new Promise(res=>{if(!src){res(null);return;}const i=new Image();i.onload=()=>res(i);i.onerror=()=>res(null);i.src=src;});}
 async function boot(){const tok=++bootTok;hideCard();hint('');trans=null;$('#keep').classList.remove('show');PHOTO=null;PHOTO_IMG=null;for(const k in SNAPS)delete SNAPS[k];
- const km=location.hash.match(/[#&]k=([A-Za-z0-9]{6,32})/);DATA=km?null:parse();
- if(!km&&!DATA){scene=null;started=false;$('#gate').classList.remove('show');$('#rotate').classList.remove('show');$('#mute').classList.remove('show');$('#recenter').classList.remove('show');$('#create').classList.add('show');$('#create').scrollTop=0;return;}
+ const km=location.pathname.match(/^\/for\/(?:[^\/]*-)?([A-Za-z0-9]{6,32})\/?$/)||location.hash.match(/[#&]k=([A-Za-z0-9]{6,32})/);DATA=km?null:parse();
+ if(!km&&!DATA){setLang('en');scene=null;started=false;$('#gate').classList.remove('show');$('#rotate').classList.remove('show');$('#mute').classList.remove('show');$('#recenter').classList.remove('show');$('#create').classList.add('show');$('#create').scrollTop=0;return;}
  $('#create').classList.remove('show');started=false;hearts.length=0;scene=Meadow();scene.enter();$('#gate').classList.add('show');
- if(DATA){$('#gate-name').textContent=DATA.b;gateState('ready');resize();return;}
+ if(DATA){setLang(DATA.l);$('#gate-name').textContent=DATA.b;gateState('ready');resize();return;}
+ setLang('en');
  gateState('load');resize();
  try{const r=await fetch('/api/load?k='+encodeURIComponent(km[1]));if(tok!==bootTok)return;if(!r.ok)throw new Error(r.status);const j=await r.json();
   DATA=clean(j.data||{});PHOTO=typeof j.photo==='string'&&j.photo.startsWith('data:image/')?j.photo:null;PHOTO_IMG=await loadPhoto(PHOTO);if(tok!==bootTok)return;
-  $('#gate-name').textContent=DATA.b;gateState('ready');}
+  setLang(DATA.l);$('#gate-name').textContent=DATA.b;gateState('ready');}
  catch(e){if(tok!==bootTok)return;gateState('gone');}}
-$('#gone-make').onclick=()=>{location.hash='';};
+$('#gone-make').onclick=()=>{location.href='/';};
 addEventListener('hashchange',boot);
 resize();buildStatic();boot();requestAnimationFrame(loop);
 if(document.fonts&&document.fonts.ready)document.fonts.ready.then(()=>{if(scene&&scene.resize)scene.resize();});

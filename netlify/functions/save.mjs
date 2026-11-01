@@ -45,6 +45,10 @@ export default async (req) => {
     m: (Array.isArray(d.m) ? d.m : []).slice(0, 3).map((x) => cut(x, 120)),
     msg: cut(d.msg, 400),
     km: d.km !== false,
+    c1: cut(d.c1, 60),
+    c2: cut(d.c2, 60),
+    dk: Math.min(20040, Math.max(0, Math.round(Number(d.dk) || 0))),
+    u: d.u === "mi" ? "mi" : "km",
   };
   if (!data.a || !data.b) return json({ error: "names_required" }, 400);
 

@@ -1,0 +1,10 @@
+{
+  "name": "the-way-to-you",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "A tiny paper world for anniversaries.",
+  "dependencies": {
+    "@netlify/blobs": ">=8.1.0"
+  }
+}
